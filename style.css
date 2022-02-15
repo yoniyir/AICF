@@ -92,6 +92,7 @@ justify-content: center;
 }
 
 td {
+    text-align: -webkit-center;
     border-radius: 30px;
     padding: 5px;
 }
