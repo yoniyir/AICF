@@ -37,7 +37,7 @@ function set_msg(msg) {
 function undorow() {
     let filename = document.getElementById('format').value;
     let url = new URL(main_url + 'undo');
-    let params = { filename: format };
+    let params = { filename: filename };
     Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
     fetch(url).then(res => res.json()).then(res => set_msg(res)).catch(e => console.log(e));
 }
