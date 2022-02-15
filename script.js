@@ -1,4 +1,4 @@
-let main_url = 'https://aicfpredict.pythonanywhere.com/'
+let main_url = 'http://aicfpredict.pythonanywhere.com/'
 
 
 window.onload = function on_load() {
@@ -19,11 +19,23 @@ function form_submit(ev) {
     let msg;
     Object.keys(params).forEach(key => url.searchParams.append(key, params[key]))
     fetch(url).then(res => res.json()).then(res => set_msg(res)).catch(e => console.log(e));
+
 }
 
 function set_msg(msg) {
     document.getElementById('status_text').innerText = msg.text;
+    undo_btn = document.getElementById('undo');
+    if (undo_btn.className == 'dnone') {
+        undo_btn.classList.remove('dnone');
+    }
+    else {
+        undo_btn.classList.add('dnone');
+    }
 }
-function download_csv() {
-    fetch(main_url + 'download').then(res => res.blob()).then(blob => download(blob)).catch(e => console.log(e))
+function undo_row() {
+    let filename = document.getElementById('format').value;
+    let url = new URL(main_url + 'undo');
+    let params = { filename: format };
+    Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
+    fetch(url).then(res => res.json()).then(res => set_msg(res)).catch(e => console.log(e));
 }

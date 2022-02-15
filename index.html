@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="btn.css">
+
+
     <title>AICF Updater</title>
 </head>
 
@@ -23,15 +25,20 @@
             <label>Symbol</label>
             <select name="symbols" id="symbol" class="fa">
                 <option value="BTC">
-                    Bitcoin
+                    BTC
                 </option>
-                <option value="ETH">Ethereum</option>
-                <option value="DOGE">Doge</option>
+                <option value="ETH">ETH</option>
+                <option value="DOGE">DOGE</option>
                 <option value="BNB">BNB</option>
                 <option value="ADA">ADA</option>
                 <option value="VET">VET</option>
                 <option value="XRP">XRP</option>
-                <option value="SOL">Solana</option>
+                <option value="SOL">SOL</option>
+                <option value="CHR">CHR</option>
+                <option value="ANT">ANT</option>
+                <option value="WAN">WAN</option>
+                <option value="SNX">SNX</option>
+                <option value="FTM">FTM</option>
             </select>
         </div>
 
@@ -56,7 +63,7 @@
                 </div>
             </div>
         </div>
-        <div class="row" style="align-items: center;">
+        <div>
             <table>
                 <tr>
                     <td><a href="https://www.pythonanywhere.com/user/aicfpredict/files/home/aicfpredict/mysite/4h.csv"
@@ -83,6 +90,7 @@
         </div>
         <div class="status">
             <p id="status_text"></p>
+            <button id="undo" class="dnone" onclick="undo_row">Undo</button>
         </div>
     </div>
 
