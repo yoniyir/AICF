@@ -2,7 +2,9 @@ let main_url = 'https://aicfpredict.pythonanywhere.com/'
 
 
 window.onload = function on_load() {
-    document.getElementsByClassName('btn-one')[0].addEventListener('click', form_submit)
+    document.getElementsByClassName('btn-one')[0].addEventListener('click', form_submit);
+    document.getElementById('undo').addEventListener('click', undorow);
+
 }
 
 function form_submit(ev) {
@@ -32,7 +34,7 @@ function set_msg(msg) {
         undo_btn.classList.add('dnone');
     }
 }
-function undo_row() {
+function undorow() {
     let filename = document.getElementById('format').value;
     let url = new URL(main_url + 'undo');
     let params = { filename: format };
