@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="btn.css">
+
+
+    <title>AICF Updater</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>AICF Updater</h1>
+        </div>
+        <div class="row">
+            <label>Symbol</label>
+            <select name="symbols" id="symbol" class="fa">
+                <option value="BTC">
+                    Bitcoin
+                </option>
+                <option value="ETH">Ethereum</option>
+                <option value="DOGE">Doge</option>
+                <option value="BNB">BNB</option>
+                <option value="ADA">ADA</option>
+                <option value="VET">VET</option>
+                <option value="XRP">XRP</option>
+                <option value="SOL">Solana</option>
+            </select>
+        </div>
+
+        <div class="row">
+            <label>Expeted Price</label>
+            <input type="number" id="expected_price" />
+        </div>
+
+        <div class="row">
+            <label>Format</label>
+            <select id="format" class="fa">
+                <option value="4h.csv">4 Hours</option>
+                <option value="1d.csv">1 Day</option>
+                <option value="1w.csv">1 Week</option>
+                <option value="1m.csv">1 Month</option>
+            </select>
+        </div>
+        <div class="row" style="align-items: center;">
+            <div class="box-1">
+                <div class="btn btn-one">
+                    <span>Submit</span>
+                </div>
+            </div>
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <td><a href="https://www.pythonanywhere.com/user/aicfpredict/files/home/aicfpredict/mysite/4h.csv"
+                            onclick="location.href=this.href+'? download_req_id='+download_req_id;return false;">
+                            Download 4h.csv
+                        </a></td>
+                    <td> <a href="https://www.pythonanywhere.com/user/aicfpredict/files/home/aicfpredict/mysite/1d.csv"
+                            onclick="location.href=this.href+'? download_req_id='+download_req_id;return false;">
+                            Download 1d.csv
+                        </a></td>
+                </tr>
+                <tr>
+                    <td><a href="https://www.pythonanywhere.com/user/aicfpredict/files/home/aicfpredict/mysite/1w.csv"
+                            onclick="location.href=this.href+'? download_req_id='+download_req_id;return false;">
+                            Download 1w.csv
+                        </a></td>
+                    <td> <a href="https://www.pythonanywhere.com/user/aicfpredict/files/home/aicfpredict/mysite/1m.csv"
+                            onclick="location.href=this.href+'? download_req_id='+download_req_id;return false;">
+                            Download 1m.csv
+                        </a></td>
+                </tr>
+            </table>
+
+        </div>
+        <div class="status">
+            <p id="status_text"></p>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
