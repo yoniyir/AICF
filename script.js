@@ -1,4 +1,4 @@
-let main_url = 'http://aicfpredict.pythonanywhere.com/'
+let main_url = 'https://aicfpredict.pythonanywhere.com/'
 
 
 window.onload = function on_load() {
