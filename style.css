@@ -1,6 +1,7 @@
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+    overflow-y:hidden;
 }
 
 
@@ -85,6 +86,9 @@ input, select {
 table {
     width: 400px;
     text-align: center;
+    display: flex;
+flex-wrap: wrap;
+justify-content: center;
 }
 
 td {
