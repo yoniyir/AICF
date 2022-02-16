@@ -30,9 +30,6 @@ function set_msg(msg) {
     if (undo_btn.className == 'dnone') {
         undo_btn.classList.remove('dnone');
     }
-    else {
-        undo_btn.classList.add('dnone');
-    }
 }
 function undorow() {
     let filename = document.getElementById('format').value;
